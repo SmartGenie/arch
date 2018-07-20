@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  <ion-title>Add & Store Policies</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+
+<ion-content padding class="card-background-page">
+    <form #onSignupForm="ngForm" novalidate>
+  <div class="title" align="center">
+    <img src="assets/img/smartgenieland2.jpg" class="form-img2"/>
+  </div>
+  
+  <ion-grid>
+      <ion-list no-lines>
+          <button ion-item (click)="takePicture()">
+          <!--<ion-avatar item-start>
+          <h2><i class="fas fa-camera-retro"></i></h2>
+          </ion-avatar>-->
+          <h3>Picture</h3>
+          <p text-wrap>Take photo of the existing policy document and system will scan and fill your details automatically.</p>
+          <ion-icon name="arrow-dropright" showWhen="android" color="grey" padding-left item-end></ion-icon>
+          </button>
+          <button ion-item (click)="uploadPdf()">
+          <!--<ion-avatar item-start>
+          <h2><i class="fas fa-camera-retro"></i></h2>
+          </ion-avatar>-->
+          <h3>Pdf</h3>
+          <p text-wrap>Upload PDF of the existing policy document and system will scan and fill your details automatically.</p>
+          <ion-icon name="arrow-dropright" showWhen="android" color="grey" padding-left item-end></ion-icon>
+          </button>
+          <button ion-item (click)="onOCRPage()">
+          <!--<ion-avatar item-start>
+          <h2><i class="fas fa-camera-retro"></i></h2>
+          </ion-avatar>-->
+          <h3>Manual</h3>
+          <p text-wrap>Take photo of the policy document and system will scan and fill your details automatically.</p>
+          <ion-icon name="arrow-dropright" showWhen="android" color="grey" padding-left item-end></ion-icon>
+          </button>
+          </ion-list>
+          
+  </ion-grid>
+ 
+  <div class="title" align="center">
+    <img src="assets/img/smartgenieland3.jpg" class="form-img3"/>
+  </div>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-6 *ngFor="let photo of photos; let id = index">
+        <ion-card class="block">
+          <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+          <img [src]="photo" *ngIf="photo"/>
+        </ion-card>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid>
+  <div padding>
+    <button  ion-button (click)="onClick()" type="submit" block class="deleteIcon2">Next
+    </button>
+  </div>
+</form>
+</ion-content>

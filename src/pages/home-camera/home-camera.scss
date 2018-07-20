@@ -1,0 +1,41 @@
+page-home-camera {
+  .block {
+
+    position: relative;
+
+    .deleteIcon {
+      position: absolute !important;
+      color: #ffffff !important;
+      margin-left: 80% !important;
+    }
+    .deleteIcon:before {
+      font-size: 50px !important;
+    }
+    .form-img3 {
+      max-height: 200px;
+      width: 100%;
+      margin-bottom: -25px;
+      margin-top: -20px;
+    }
+    .form-img2 {
+      max-height: 200px;
+      width: 100%;
+      margin-bottom: -25px;
+      margin-top: -20px;
+    }
+
+  }
+  .button {
+    height: 70Px;
+    width: 295px;
+
+  }
+  .deleteIcon2{
+    height: 70Px;
+    width: 295px;
+    align-self: center;
+  }
+  .button-md {
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add & Store Policies
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="title" align="center">
+    <img src="assets/img/smartgenieland2.jpg" class="form-img2" />
+  </div>
+  <form #insuranceForm="ngForm" >
+    <ion-list>
+      <h6 ion-text color="primary">Which insurance policy would you like to add?</h6>
+      <ion-item no-lines>
+        <ion-col>
+          <button ion-button   class="from" text-center text-wrap text-justify>
+            <ion-col >
+              Life 
+            </ion-col>
+            <ion-row>
+              <ion-col text-right>
+                <i class="fas fa-hand-holding-heart "></i>
+              </ion-col>
+            </ion-row>
+          </button>
+        </ion-col>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-col>
+          <button ion-button  class="from" text-center text-wrap text-justify>
+            <ion-col>
+              car
+            </ion-col>
+            <ion-row>
+              <ion-col text-right>
+                <i class="fas fa-car "></i>
+              </ion-col>
+            </ion-row>
+          </button>
+        </ion-col>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-col>
+          <button ion-button class="from" text-center text-wrap text-justify>
+            <ion-col>
+              Health
+            </ion-col>
+            <ion-row>
+              <ion-col text-right>
+                <i class="fas fa-briefcase-medical "></i>
+              </ion-col>
+            </ion-row>
+          </button>
+        </ion-col>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-col>
+          <button ion-button  class="from" text-center text-wrap text-justify>
+            <ion-col>
+              Travel
+            </ion-col>
+            <ion-row>
+              <ion-col text-right>
+                <i class="fas fa-plane "></i>
+              </ion-col>
+            </ion-row>
+          </button>
+        </ion-col>
+      </ion-item>
+     <!-- <div *ngIf="insuranceType.invalid && insuranceForm.submitted" color="danger" class="error">
+        <h6 ion-text color="danger">Please select atleast one option to proceed</h6>
+      </div>-->
+   
+      <!-- <ion-col col-12>
+          <p ion-text [hidden]="insurance.valid || submitted == false" class="validation-label" >
+              insurance is required
+          </p>
+        </ion-col> -->
+
+     <h4 ion-text color="primary">Which insurance company would you like to add?</h4>
+      <ion-item style="border:1px solid lightgray;margin-top:6px;">
+          
+        <ion-label *ngIf="isSelected==''">Select</ion-label>
+        <ion-label *ngIf="isSelected"><span style="font-size:14px !important;color:#333 !important;">{{isSelected}}</span></ion-label>
+        <ion-select interface="popover" name="typeOfInsuranceCompany" [(ngModel)]="isSelected" required #typeOfInsuranceCompany="ngModel">
+          <ion-option value="Axa ">Axa</ion-option>
+          <ion-option value="Alianz">Alianz</ion-option>
+        </ion-select>
+      </ion-item>
+      <div *ngIf="typeOfInsuranceCompany.invalid && insuranceForm.submitted"  color="danger" [ngClass] = "'error'"> 
+          <br><div><h6 ion-text color="danger">Insurance company is required. please select. </h6></div>
+      </div>
+    
+    </ion-list>
+    <!-- <h4 ion-text color="primary"> File Type</h4>
+    <ion-item style="border:1px solid lightgray;margin-top:6px;">
+      <ion-label *ngIf="isfiletype==''">Select</ion-label>
+      <ion-label *ngIf="isfiletype"><span style="font-size:14px !important;color:#333 !important;">{{isfiletype}}</span></ion-label>
+      <ion-select interface="popover" name="FileType" [(ngModel)]="isfiletype" required #FileType="ngModel">
+        <ion-option value="jpeg">jpeg</ion-option>
+        <ion-option value="png">png</ion-option>
+      </ion-select>
+    </ion-item>
+    <div *ngIf="FileType.invalid && insuranceForm.submitted" color="danger" [ngClass] = "'error'">
+    
+        <br><div><h6 ion-text color="danger">FileType is required. please select.</h6></div>
+    </div>-->
+
+     <!-- <ion-grid>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8>
+            <button ion-button block type="NEXT">Submit</button>
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+      </ion-grid>-->
+  </form>
+</ion-content>

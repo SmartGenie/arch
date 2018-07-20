@@ -1,0 +1,35 @@
+page-type-of-insurance {
+.from{
+  height:50Px;
+  width:290px;
+  color: #343434;
+  background-color: #f5f5f5;
+  
+}
+
+.from:hover {
+  background-color: #387ef5 !important;
+  color: whitesmoke !important;
+}
+
+  .select-icon {
+    top: 50%;
+    right: 14px;
+    height: 0px !important;
+    position: absolute !important;
+  }
+
+  ion-item {
+    .select-text {
+      display: none;
+    }
+  }
+
+}
+
+.popover-md .popover-content {
+  width: 90% !important;
+  margin: 35px 18px;
+  left: 0px !important;
+}
+

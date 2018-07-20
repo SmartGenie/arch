@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <p></p>
+
+
+  <div class="title" align="center">
+    <img src="assets/img/logo.jpg" class="form-img"/>
+  </div>
+
+  <div class="title" align="center">
+    <img src="assets/img/smartgenieland2.jpg" class="form-img2"/>
+  </div>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col text-center>
+        <button ion-button outline (click)="addStorePolicy()" class="btn default-white-color" text-center text-wrap
+                text-justify>
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                  <i class="far fa-user" ion-text color="primary"></i>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center>
+               Add & Store
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center>
+               policies
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button outline (click)="oncomparePage()" class="btn default-white-color" text-center text-wrap
+                text-justify>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                <i class="fas fa-file-alt"  ion-text color="primary"></i>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center>
+                Compare Quotes
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center>
+                (coming soon)
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button outline (click)="onclaimsPage()" class="btn default-white-color" text-center text-wrap
+                text-justify>
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                  <i class="fas fa-edit" ion-text color="primary"></i>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center>
+                Manage Claims
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </button>
+      </ion-col>
+
+      <ion-col text-center>
+        <button ion-button outline (click)="ondirectPage()" class="btn default-white-color" text-center text-wrap
+                text-justify>
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                <i class="fas fa-shopping-cart" ion-text color="primary"></i>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center>
+                Special Promotions
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-center>
+                (coming soon)
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="title" align="center">
+    <img src="assets/img/smartgenieland3.jpg" class="form-img3"/>
+  </div>
+
+
+</ion-content>

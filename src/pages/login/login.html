@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="title" align="center">
+    <img src="assets/img/logo.jpg" class="form-img"/>
+  </div>
+
+
+  <div>
+    <form #onloginForm="ngForm" novalidate>
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <ion-item>
+              <ion-label color="primary"><i class="fa fa-envelope" aria-hidden="true"></i></ion-label>
+              <ion-input [(ngModel)]="signup.emailId" name="emailId" placeholder="E-mail" type="emailId" #emailId="ngModel"
+                         spellcheck="false" autocapitalize="off"
+                         required>
+              </ion-input>
+            </ion-item>
+            <p ion-text [hidden]="emailId.valid || submitted == false" color="danger" padding-left>
+              Email is required
+            </p>
+            <ion-item>
+              <ion-label color="primary"><i class="fa fa-lock" aria-hidden="true"></i></ion-label>
+              <ion-input [(ngModel)]="signup.password" name="password" placeholder="Password" type="password" #password="ngModel"
+                         spellcheck="false" autocapitalize="off"
+                         required>
+              </ion-input>
+
+            </ion-item>
+            <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+              Password is required
+            </p>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+     
+     
+      <ion-row>
+        <ion-col text-center padding>
+            <button ion-button round text-center text-wrap
+                    text-justify (click)="onlogin(onloginForm)" type="submit" block>Confirm</button>
+        </ion-col>
+          <!--<div padding>
+    <button ion-button (click)="forgotLogin()" block>Forgot Password</button>
+  </div>-->
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+
+         <!--New here? <a (click)="redirectLogin()">Explore</a>-->
+         <form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+
+            <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms & Conditions and Privacy Policy.
+           
+            
+            </form>
+            <ion-row>
+                <ion-col text-center>
+                  
+            <p>"We have stored all your data securely and created your SmartGenie account .Please select your preferred E-mail and Password to access it anytime ,anywhere"</p>
+            </ion-col>
+            </ion-row>
+          <!--<div padding>
+    <button ion-button (click)="forgotLogin()" block>Forgot Password</button>
+  </div>-->
+        </ion-col>
+      </ion-row>
+      <div class="title" align="center"><img src="assets/img/smartgenieland3.jpg" class="form-img3"/></div>
+    </form>
+   
+  </div>
+
+
+</ion-content>

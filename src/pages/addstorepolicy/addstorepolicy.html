@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add & Store Policies
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="title" align="center">
+    <img src="assets/img/smartgenieland2.jpg" class="form-img2" />
+  </div>
+  <h6 ion-text color="primary">Which insurance policies do you own today?</h6>
+  <form #insuranceForm="ngForm" (ngSubmit)="onSubmit(insuranceForm)">
+   <!-- <ion-list checkbox [(ngModel)]="insurance" name="insuranceType"  type="insuranceType" #insuranceType="ngModel" required>-->
+      <ion-item no-lines>
+
+        <ion-label>life</ion-label>
+
+        <ion-checkbox item-left value="life"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Car</ion-label>
+        <ion-checkbox item-left value="car"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Health</ion-label>
+        <ion-checkbox item-left value="health"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Travel</ion-label>
+        <ion-checkbox item-left value="travel"></ion-checkbox>
+
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>TermLife</ion-label>
+        <ion-checkbox item-left value="TermLife"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Saving/Investment(whole life)</ion-label>
+        <ion-checkbox item-left value="Saving/Investment"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Personal Accident</ion-label>
+        <ion-checkbox item-left value="Personal Accident"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Critical Illness</ion-label>
+        <ion-checkbox item-left value="Critical Illness"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Home</ion-label>
+        <ion-checkbox item-left value="Home"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Others -Type & None</ion-label>
+        <ion-checkbox item-left value="Others"></ion-checkbox>
+      </ion-item>
+   <!-- <div *ngIf="insuranceType.invalid && insuranceForm.submitted" class="error">
+        Insurance is required.
+        </ion-list>
+      </div>-->
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8>
+            <button ion-button block type="submit">Next</button>
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+      </ion-grid>
+   
+  </form>
+</ion-content>
