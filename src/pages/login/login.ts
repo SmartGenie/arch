@@ -4,10 +4,12 @@ import {IonicPage, NavController, MenuController, LoadingController, AlertContro
 import {Http, Headers, RequestOptions} from '@angular/http';
 // import * as OktaAuth from '@okta/okta-auth-js';
 //import { TabsPage } from '../tabs-page/tabs-page';
-import {SignupPage} from '../signup/signup';
+//import {SignupPage} from '../signup/signup';
 import {SignupSuccessfulPage} from '../signup-successful/signup-successful';
 import {ForgotpasswordPage} from '../forgotpassword/forgotpassword';
 import {UserRegistration} from '../../interfaces/user-registration';
+import { PrivacyPage } from '../privacy/privacy';
+import { TermsPage } from '../terms/terms';
 
 let headers = new Headers({'Content-Type': 'application/json'});
 let options = new RequestOptions({headers: headers});
@@ -72,6 +74,8 @@ export class LoginPage {
 
       loading.present();
 
+      
+
       this.http.post(registerUrl, postdata, options).map(res => res.json())
         .subscribe(data => {
             console.log(data.responseBean);
@@ -108,12 +112,14 @@ export class LoginPage {
   }
 
   redirectLogin() {
-    this.navCtrl.push(SignupPage);
+    this.navCtrl.push(PrivacyPage);
   }
 
   forgotLogin() {
     this.navCtrl.push(ForgotpasswordPage);
   }
-
+  terms(){
+    this.navCtrl.push(TermsPage);
+  }
 
 }
